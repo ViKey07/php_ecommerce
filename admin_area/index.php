@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../index.css">
     <title>Admin Dashboard</title>
+    <style>
+        .product_image{
+            width: 100px;
+            object-fit: contain;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid p-0">
@@ -68,19 +74,16 @@
                 if(isset($_GET['view_products'])){
                     include('view_products.php');
                 }
+                if(isset($_GET['edit_products'])){
+                    include('edit_products.php');
+                }
+                if(isset($_GET['delete_product'])){
+                    include('delete_product.php');
+                }
                 ?>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
