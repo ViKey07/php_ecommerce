@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Your Orders</title>
+    <style>
+        .bg-custom{
+            background-color: #3A3086;
+        }
+    </style>
 </head>
 <body>
 <?php
@@ -16,8 +21,8 @@
 ?>
 
 <h3 class="text-success">All orders</h3>
-<table class="table table-bordered mt-5">
-    <thead class="bg-info">
+<table class="table table-bordered mt-2">
+    <thead class="text-light bg-custom">
         <tr>
             <th>Sr no</th>
             <th>Amount due</th>

@@ -14,13 +14,34 @@
     <link rel="stylesheet" href="/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html{
+            font-family: 'Poppins';
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container-fluid{
+            margin: 0;
+            padding: 0;
+        }
+        .navbar-expand-lg{
+            background-color: #3A3086;
+            padding: 0.5em 0.5em;  
+        }
+        .nav-link{
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <div class="home-nav-logo">
-                    <a href="../index.php"><img src="../assets/Asset 2112.png" alt="home-logo" class="home-nav-logo-img" style="width: 15%;"></a>
+                    <a href="../index.php"><img src="../assets/logo_ybc.png" alt="home-logo" class="home-nav-logo-img" style="width: 15%;"></a>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -40,10 +61,7 @@
 
                         
                     </ul>
-                    <form class="d-flex" action="search_product.php" method="GET">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
-                        <input type="submit" value="Search" class="btn btn-outline-dark" name="search_data_product">
-                    </form>
+                    
                     
 
                     
@@ -51,42 +69,33 @@
             </div>
         </nav>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <nav class="navbar navbar-expand-lg">
             <ul class="navbar-nav me-auto">
             
             <?php
                 if(!isset($_SESSION['username'])){
                     echo "<li class='nav-item'>
-                    <a href='#' class='nav-link'>Welcome Guest</a>
+                    <a href='#' class='nav-link text-light'>Welcome Guest</a>
                 </li>";
                 }else{
                     echo "<li class='nav-item'>
-                    <a href='#' class='nav-link'>Welcome ".$_SESSION['username']."</a>
+                    <a href='#' class='nav-link text-light'>Welcome ".$_SESSION['username']."</a>
                 </li>";
                 }
 
                  if(!isset($_SESSION['username'])){
                     echo "<li class='nav-item'>
-                    <a href='./user_login.php' class='nav-link'>Login</a>
+                    <a href='./user_login.php' class='nav-link text-light'>Login</a>
                 </li>";
                  }else{
                     echo "<li class='nav-item'>
-                    <a href='logout.php' class='nav-link'>Logout</a>
+                    <a href='logout.php' class='nav-link text-light'>Logout</a>
                 </li>";
                  }
             ?>
             
             </ul>
         </nav>
-
-        
-
-
-
-        <div class="bg-light">
-            <h3 class="text-center">Our Products</h3>
-            <p class="text-center">Best Selling</p>
-        </div>
 
         <div class="row">
             <div class="col-md-12">

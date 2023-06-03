@@ -20,17 +20,19 @@ function getproducts() {
             $product_id = $row['product_id'];
             $category_id = $row['category_id'];
             echo "<div class='col-md-3 mb-2'>
-            <div class='card'>
+            <div class='card' style='height: 500px;'> <!-- Set a fixed height -->
                 <img src='./admin_area/product_images/$product_image' class='card-img-top' alt='$product_title'>
-                <div class='card-body'>
+                <div class='card-body text-center'>
                     <h5 class='card-title'>$product_title</h5>
                     <p class='card-text'>$product_description</p>
-                    <p class='card-text'>$product_price</p>
-                    <a href='index.php?add_to_cart=$product_id' class='btn btn-primary'>Add to Cart</a>
-                    
+                    <p class='card-text fw-bold text-dark'>₹ $product_price</p> 
                 </div>
+                <div class='card2'>
+                    <a href='index.php?add_to_cart=$product_id' class='btn btn-primary w-100'>Add to Cart</a>
                 </div>
-        </div>";
+            </div>
+        </div>
+        ";
         }
     }
 }
@@ -74,19 +76,40 @@ function get_unique_categories() {
 }
 
 
+// function getcategories() {
+//     global $con;
+//     $select_categories = "Select * from `categories`";
+//     $result_categories = mysqli_query($con, $select_categories);
+
+//     while($row_data = mysqli_fetch_assoc($result_categories)){
+//         $category_title = $row_data['category_title'];
+//         $category_id = $row_data['category_id'];
+//         echo " <li class='nav-item'>
+//         <a href='index.php?category=$category_id' class='nav-link text-light m-3'>$category_title</a>
+//         </li>";
+//     }
+// }
+
 function getcategories() {
     global $con;
-    $select_categories = "Select * from `categories`";
+    $select_categories = "SELECT * FROM `categories`";
     $result_categories = mysqli_query($con, $select_categories);
 
-    while($row_data = mysqli_fetch_assoc($result_categories)){
+    while ($row_data = mysqli_fetch_assoc($result_categories)) {
         $category_title = $row_data['category_title'];
         $category_id = $row_data['category_id'];
-        echo " <li class='nav-item'>
-        <a href='index.php?category=$category_id' class='nav-link text-light'>$category_title</a>
-        </li>";
+        $category_image = $row_data['category_image'];
+        
+        // Display category title and image
+        echo "<li class='nav-item cat-trans'>
+                <a href='index.php?category=$category_id' class='nav-link text-light m-3'>
+                <img src='./admin_area/category_images/$category_image' class='card-img-top' alt='$category_title' style='height: 70vh;'>
+                    $category_title
+                </a>
+            </li>";
     }
 }
+
 
 
 function search_product() {

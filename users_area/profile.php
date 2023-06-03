@@ -21,6 +21,13 @@
         .home-nav-logo-img {
             width: 100%;
         }
+        .navbar-expand-lg{
+            background-color: #3A3086;
+            padding: 0.5em 0.5em;  
+        }
+        .nav-item1 {
+            background-color: #3A3086;
+        }
     </style>
 </head>
 
@@ -29,7 +36,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <div class="home-nav-logo">
-                    <a href="../index.php"><img src="../assets/Asset 2112.png" alt="home-logo" class="home-nav-logo-img" style="width: 15%;"></a>
+                    <a href="../index.php"><img src="../assets/logo_ybc.png" alt="home-logo" class="home-nav-logo-img" style="width: 15%;"></a>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -48,27 +55,17 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="../cart.php"><i class="fa-sharp fa-light fa-cart-shopping"></i><sup><?php cart_item(); ?></sup></a>
+                            <a class="nav-link" href="cart.php">
+                                <i class="fa fa-shopping-cart" style="color: #3A3086;"></i>
+                                <sup style="background-color: red; color: white; border-radius: 50%; padding: 2px 6px;"><?php echo cart_item(); ?></sup>
+                            </a>
                         </li>
-
-                        <li>
-                            <a href="#" class="nav-link">Total Price: <?php total_cart_price(); ?> </a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" action="../search_product.php" method="GET">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
-                        <input type="submit" value="Search" class="btn btn-outline-dark" name="search_data_product">
-                    </form>
-                    
-                    <?php
-                        cart();
-                    ?>
                     
                 </div>
             </div>
         </nav>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <ul class="navbar-nav me-auto">
             
             
@@ -98,16 +95,11 @@
             </ul>
         </nav>
 
-        <div class="bg-light">
-            <h3 class="text-center">Our Products</h3>
-            <p class="text-center">Best Selling</p>
-        </div>
-
 
         <div class="row">
             <div class="col-md-2">
-                <ul class="navbar-nav bg-secondary text-center" style="height:100vh">
-                    <li class="nav-item bg-info">
+                <ul class="navbar-nav bg-secondary text-center">
+                    <li class="nav-item1">
                         <a class="nav-link text-light" href="#"><h4>Your profile</h4></a>
                     </li>
 
