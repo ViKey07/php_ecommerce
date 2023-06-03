@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include('../includes/connect.php');
     include('../functions/common_function.php');
 
@@ -9,6 +10,12 @@
         $select_query = "SELECT * FROM `admin_table` WHERE admin_name = '$admin_username'";
         $result = mysqli_query($con, $select_query);
         $rows_count = mysqli_num_rows($result);
+
+        if(isset($_SESSION['admin_username'])) {
+            // Redirect to the desired page
+            echo "<script>window.open('index.php', '_self')</script>";
+            exit();
+        }
 
         if($rows_count == 1){
             $row = mysqli_fetch_assoc($result);

@@ -54,7 +54,7 @@
                     <button><a href="index.php?list_orders" class="nav-link text-light bg-info my-1">All Orders</a></button>
                     <button><a href="index.php?list_payments" class="nav-link text-light bg-info my-1">All Payments</a></button>
                     <button><a href="index.php?list_users" class="nav-link text-light bg-info my-1">List Users</a></button>
-                    <button><a href="" class="nav-link text-light bg-info my-1">Logout</a></button>
+                    <button><a href="index.php?admin_logout" class="nav-link text-light bg-info my-1">Logout</a></button>
                 </div>
             </div>
 
@@ -94,6 +94,9 @@
                 }
                 if(isset($_GET['list_users'])){
                     include('list_users.php');
+                }
+                if(isset($_GET['admin_logout'])){
+                    include('admin_logout.php');
                 }
                 
                 ?>

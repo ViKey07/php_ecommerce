@@ -11,11 +11,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/Artboard 13.png">
-    <title> YBC | COEP </title>
+    <title> YBC x COEP </title>
     <link rel="stylesheet" href="/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
@@ -32,7 +32,7 @@
             padding: 0;
         }
         div.home-nav-logo{
-            width: 50%;
+            width: 60%;
         }
         .home-nav-logo-img {
             width: 100%;
@@ -85,14 +85,6 @@
             color: white;
         }
 
-        /* .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            filter: invert(100%); 
-        } */
-        /* #cat_div_full{
-            background-color: #3A3086;
-        } */
-
         #blue-hr {
             border-top: 2px solid #3A3086;
         }
@@ -101,7 +93,7 @@
         }
         .new-latest {
             display: flex;
-            margin: 4%;
+            margin: 4% 1%;
             flex-direction: column;
             align-items: center;
             justify-content: center;
@@ -113,7 +105,7 @@
             max-width: 100%;
         }
         .c-img {
-            max-width: 25%;
+            max-width: 30%;
             height: auto;
             margin-bottom: 20px;
             object-fit: contain;
@@ -137,8 +129,10 @@
             transform: scale(1.1);
         }
         .custom-bg {
-  background-color: #3A3086;
-}
+            background-color: #3A3086;
+        }
+
+
     </style>
 </head>
 
@@ -259,6 +253,10 @@
             </div>
         </div>
 
+
+
+        
+
         <div class="text-center my-2" id="cat_div_full">
             <ul class="navbar-nav d-flex">
                 <li class="nav-item">
@@ -274,7 +272,7 @@
 
         <div class="section">
             <div class="">
-                <div class="row d-flex justify-content-between align-items-center w-100">
+                <div class="row d-flex justify-content-between align-items-center">
                     <div class="col-md-3">
                         <img src="./assets/3.png" alt="Image 1" class="img-fluid">
                     </div>
@@ -330,7 +328,3 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-
-

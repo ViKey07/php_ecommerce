@@ -42,7 +42,6 @@
     $insert_orders = "INSERT INTO `user_orders` (user_id, amount_due, invoice_number, total_products, order_date, order_status) VALUES ($user_id, $subtotal, $invoice_number, $count_products, NOW(), '$status')";
     $result_query = mysqli_query($con, $insert_orders);
     if($result_query) {
-        echo "<script>alert('Orders submitted successfully.')</script>";
         echo "<script>window.open('profile.php', '_self')</script>";
     }
 

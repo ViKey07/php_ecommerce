@@ -1,4 +1,3 @@
-
 <div class="l-logo-container">
   <div class="l-logo">
     <img class="l-img-1" src="./assets/Asset 512.png" alt="Logo 1" />
@@ -53,21 +52,25 @@
     .l-img-1 {
       width: 35%;
       height: 6vh;
+      object-fit: contain;
     }
 
     .l-img-2 {
       width: 35%;
       height: 6vh;
+      object-fit: contain;
     }
 
     .l-img-3 {
       width: 20%;
       height: 6vh;
+      object-fit: contain;
     }
 
     .l-img-4 {
       width: 35%;
       height: 6vh;
+      object-fit: contain;
     }
 
     .l-title {
@@ -97,12 +100,14 @@
       .l-img-2 {
         width: 20%;
         height: auto;
+        object-fit: contain;
       }
 
       .l-img-3,
       .l-img-4 {
         width: 15%;
         height: auto;
+        object-fit: contain;
       }
 
       .l-detailss {
