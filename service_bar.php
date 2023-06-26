@@ -1,30 +1,30 @@
 <div class="l-logo-container">
   <div class="l-logo">
-    <img class="l-img-1" src="./assets/Asset 512.png" alt="Logo 1" />
+    <img class="l-img-1" src="./assets/shipment.png" alt="Logo 1" />
     <div class="l-detailss">
       <p class="l-title">Free Shipping</p>
-      <p class="l-info">Free shipping on order above $99</p>
+      <p class="l-info">Free shipping across India.</p>
     </div>
   </div>
   <div class="l-logo">
-    <img class="l-img-2" src="./assets/Asset 412.png" alt="Logo 2" />
+    <img class="l-img-2" src="./assets/14 Day Easy Return.png" alt="Logo 2" />
     <div class="l-detailss">
-      <p class="l-title">Cash On Delivery</p>
-      <p class="l-info">The internet trend to repeat</p>
+      <p class="l-title">Easy Returns</p>
+      <p class="l-info">14 Days Easy Returns Policy.</p>
     </div>
   </div>
   <div class="l-logo">
-    <img class="l-img-3" src="./assets/Asset 312.png" alt="Logo 3" />
+    <img class="l-img-3" src="./assets/Worldwide Shipping.png" alt="Logo 3" />
     <div class="l-detailss">
-      <p class="l-title">Gift For All</p>
-      <p class="l-info">Receive gift when subscribe</p>
+      <p class="l-title">Worldwide Shipping</p>
+      <p class="l-info">Order from anywhere in the world.</p>
     </div>
   </div>
   <div class="l-logo">
-    <img class="l-img-4" src="./assets/Asset 212.png" alt="Logo 4" />
+    <img class="l-img-4" src="./assets/100-percent.png" alt="Logo 4" />
     <div class="l-detailss">
-      <p class="l-title">Opening All Weeks</p>
-      <p class="l-info">6:00am to 17:00pm</p>
+      <p class="l-title">High Quality Products</p>
+      <p class="l-info">Quality is the pride of our workmanship.</p>
     </div>
   </div>
 </div>
@@ -47,34 +47,37 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 25%;
     }
 
     .l-img-1 {
       width: 35%;
-      height: 6vh;
+      height: 8vh;
       object-fit: contain;
     }
 
     .l-img-2 {
-      width: 35%;
-      height: 6vh;
+      width: 45%;
+      height: 8vh;
       object-fit: contain;
     }
 
     .l-img-3 {
       width: 20%;
-      height: 6vh;
+      height: 8vh;
       object-fit: contain;
     }
 
     .l-img-4 {
       width: 35%;
-      height: 6vh;
+      height: 8vh;
       object-fit: contain;
     }
 
     .l-title {
       font-weight: bolder;
+      font-size: large;
+      color: gray;
     }
 
     .l-detailss {
@@ -83,7 +86,9 @@
     }
 
     .l-info {
-      font-size: small;
+      font-size: medium;
+      font-weight: 600;
+      color: #a2a2a2;
     }
 
     @media only screen and (max-width: 768px) {
@@ -94,18 +99,19 @@
 
       .l-logo {
         margin-bottom: 2em;
+        width: 80%;
       }
 
       .l-img-1,
       .l-img-2 {
-        width: 20%;
+        width: 30%;
         height: auto;
         object-fit: contain;
       }
 
       .l-img-3,
       .l-img-4 {
-        width: 15%;
+        width: 25%;
         height: auto;
         object-fit: contain;
       }

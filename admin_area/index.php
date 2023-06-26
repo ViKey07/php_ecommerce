@@ -1,6 +1,13 @@
-<?php 
-    include('../includes/connect.php');
-    include('../functions/common_function.php');
+<?php
+include('../includes/connect.php');
+
+@session_start();
+
+if(!isset($_SESSION['admin_name'])){
+    // Admin is not logged in, redirect to admin_login.php
+    header('Location: admin_login.php');
+    exit();
+}
 ?>
 
 <!DOCTYPE html>

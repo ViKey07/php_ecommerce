@@ -11,9 +11,9 @@ if(isset($_POST['insert_cat'])){
     if($number>0){
         echo "<script>alert('This category is present inside database')</script>";
     }else{
-        move_uploaded_file($temp_image[0], "./category_images/$category_image[0]");
+        move_uploaded_file($temp_image, "./category_images/$category_image");
 
-        $insert_query="insert into `categories` (category_title, category_image) values('$category_title', '$category_image[0])'";
+        $insert_query="insert into `categories` (category_title, category_image) values('$category_title', '$category_image)'";
         $result=mysqli_query($con, $insert_query);
         if($result){
             echo "<script>alert('category has been inserted successfully')</script>";
@@ -50,9 +50,9 @@ if(isset($_POST['insert_cat'])){
     if($number > 0){
         echo "<script>alert('This category is already present in the database')</script>";
     } else {
-        move_uploaded_file($temp_category_image[0], "./category_images/$category_image[0]");
+        move_uploaded_file($temp_category_image, "./category_images/$category_image");
 
-        $insert_query = "INSERT INTO `categories` (category_title, category_image) VALUES ('$category_title', '$category_image[0]')";
+        $insert_query = "INSERT INTO `categories` (category_title, category_image) VALUES ('$category_title', '$category_image')";
         $result = mysqli_query($con, $insert_query);
         if($result){
             echo "<script>alert('Category has been inserted successfully')</script>";

@@ -23,7 +23,7 @@
             padding: 0;
             overflow-x: hidden;
         }
-        .container-fluid{
+        div.container-fluid{
             margin: 0;
             padding: 0;
         }
@@ -34,74 +34,23 @@
         .nav-link{
             color: white;
         }
+
+        @media (max-width: 576px) {
+            
+        }
     </style>
 </head>
 <body>
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <div class="home-nav-logo">
-                    <a href="../index.php"><img src="../assets/logo_ybc.png" alt="home-logo" class="home-nav-logo-img" style="width: 15%;"></a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
-                        </li>
+        
 
-                        
-                    </ul>
-                    
-                    
-
-                    
-                </div>
-            </div>
-        </nav>
-
-        <nav class="navbar navbar-expand-lg">
-            <ul class="navbar-nav me-auto">
-            
-            <?php
-                if(!isset($_SESSION['username'])){
-                    echo "<li class='nav-item'>
-                    <a href='#' class='nav-link text-light'>Welcome Guest</a>
-                </li>";
-                }else{
-                    echo "<li class='nav-item'>
-                    <a href='#' class='nav-link text-light'>Welcome ".$_SESSION['username']."</a>
-                </li>";
-                }
-
-                 if(!isset($_SESSION['username'])){
-                    echo "<li class='nav-item'>
-                    <a href='./user_login.php' class='nav-link text-light'>Login</a>
-                </li>";
-                 }else{
-                    echo "<li class='nav-item'>
-                    <a href='logout.php' class='nav-link text-light'>Logout</a>
-                </li>";
-                 }
-            ?>
-            
-            </ul>
-        </nav>
+        
 
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
                     <?php
-                        if(!isset($_SESSION['username'])){
+                        if(!isset($_SESSION['user_email'])){
                             include('user_login.php');
 
                         }else{

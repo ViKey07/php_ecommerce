@@ -7,6 +7,10 @@
             <th>Product Title</th>
             <th>Product Image</th>
             <th>Product Price</th>
+            <th>Type</th>
+            <th>Style</th>
+            <th>Print</th>
+            <th>Care</th>
             <th>Total Sold</th>
             <th>Status</th>
             <th>Edit</th>
@@ -22,16 +26,24 @@
             while($row = mysqli_fetch_assoc($result)){
                 $product_id = $row['product_id'];
                 $product_title = $row['product_title'];
-                $product_image = $row['product_image'];
+                $product_image1 = $row['product_image1'];
                 $product_price = $row['product_price'];
+                $product_type = $row['product_type'];
+                $product_style = $row['product_style'];
+                $product_print = $row['product_print'];
+                $product_care = $row['product_care'];
                 $status = $row['status'];
                 $number++;
         ?>
                 <tr class='text-center'>
                     <td><?php echo $number; ?></td>
                     <td><?php echo $product_title; ?></td>
-                    <td><img src='./product_images/<?php echo$product_image; ?>' class='product_image'/></td>
+                    <td><img src='./product_images/<?php echo$product_image1; ?>' class='product_image'/></td>
                     <td><?php echo $product_price; ?></td>
+                    <td><?php echo $product_type; ?></td>
+                    <td><?php echo $product_style; ?></td>
+                    <td><?php echo $product_print; ?></td>
+                    <td><?php echo $product_care; ?></td>
                     <td>
                         <?php 
                             $get_count = "SELECT * FROM `orders_pending` WHERE product_id = $product_id";

@@ -12,9 +12,9 @@
 
 
 <?php 
-    $username_session = $_SESSION['username'];
+    $username_session = $_SESSION['user_email'];
     if(isset($_POST['delete'])){
-        $delet_query = "DELETE FROM `user_table` WHERE username = '$username_session'";
+        $delet_query = "DELETE FROM `user_table` WHERE user_email = '$username_session'";
         $result = mysqli_query($con, $delet_query);
         if($result) {
             session_destroy();
